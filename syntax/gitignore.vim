@@ -15,6 +15,9 @@ syn match gitignoreComment "\s#.*"ms=s+1 contains=gitignoreTodo
 syn match gitignoreFile "^\(#\)\@!.*\(/\)\@<!$"
 syn match gitignoreDirectory "^\(#\)\@!.*\/$"
 
+" Color all !ignored entries the same
+syn match gitignoreIgnored "\v^\!.*$"
+
 " Define the default highlighting.
 " Only used when an item doesn't have highlighting yet
 hi def link gitignoreComment Comment
